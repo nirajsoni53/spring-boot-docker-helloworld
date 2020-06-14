@@ -23,11 +23,11 @@ STEP 8: Go to web browser and access REST API using `expose port`
 ## Docker commands
 
 - Build image: 
-    `docker build -f DockerfileName -t tagName`.
+    `docker build -f DockerfileName -t tagName` - 
     `docker build -f Dockerfile -t spring-boot-docker`
 
 - Run image:
-    `docker run -p expose port:run port imageName` 
+    `docker run -p expose port:run port imageName` - 
     `docker run -p 8088:8088 spring-boot-docker`
 
 - Show images: `docker images`
@@ -39,6 +39,9 @@ STEP 8: Go to web browser and access REST API using `expose port`
 ## Docker file details
 
 - FROM: `Required files to run our application`
-- ADD: `first argument is a source file path which is used to read jar from project diredctory, and second argument is a destination directory is for copy in that directory`
-- EXPOSE: `The port number which is used to run application it is same as application.property file server.port value`
+
+- ADD: `first argument is a source file path which is used to read jar from         project diredctory, and second argument is a destination directory is         for copy in that directory`
+
+- EXPOSE: `The port number which is used to run application it is same as            application.property file server.port value`
+
 - ENTRYPOINT: `The command to run a jar file`
